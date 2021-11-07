@@ -1,6 +1,7 @@
 package com.company.parsers;
 
 import com.company.Consts;
+import xmlclasses.ObjectFactory;
 import xmlclasses.Scientists.Scientist;
 
 import java.io.IOException;
@@ -13,7 +14,6 @@ import java.util.logging.Logger;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
@@ -23,13 +23,15 @@ import javax.xml.transform.stream.StreamSource;
 public class StAXParser {
 
     private String filename;
+    private ObjectFactory objectFactory;
 
-    private final List<Scientist> scientists;
+    private List<Scientist> scientists;
     Scientist scientist;
     Scientist.Faculty faculty;
     Scientist.Status status;
 
     public StAXParser(String filename) {
+        objectFactory = new ObjectFactory();
         scientists = new ArrayList<>();
         this.filename = filename;
     }
@@ -62,7 +64,7 @@ public class StAXParser {
         if (xmlEvent.isStartElement()) {
             StartElement startElement = xmlEvent.asStartElement();
             if (startElement.getName().getLocalPart().equals(Consts.SCIENTIST)) {
-                scientist = new Scientist();
+                scientist = objectFactory.createScientistsScientist();
             }
             else if (startElement.getName().getLocalPart().equals(Consts.SURNAME)) {
                 xmlEvent = eventReader.nextEvent();
@@ -77,7 +79,7 @@ public class StAXParser {
                 scientist.setMiddleName(xmlEvent.asCharacters().getData());
             }
             else if (startElement.getName().getLocalPart().equals(Consts.FACULTY)) {
-                faculty = new Scientist.Faculty();
+                faculty = objectFactory.createScientistsScientistFaculty();
                 setFaculty(eventReader);
             }
             else if (startElement.getName().getLocalPart().equals(Consts.CATHEDRA)) {
@@ -89,7 +91,7 @@ public class StAXParser {
                 scientist.setDegree(xmlEvent.asCharacters().getData());
             }
             else if (startElement.getName().getLocalPart().equals(Consts.STATUS)) {
-                status = new Scientist.Status();
+                status = objectFactory.createScientistsScientistStatus();
                 setStatus(eventReader);
             }
         } else if (xmlEvent.isEndElement()) {
@@ -107,7 +109,6 @@ public class StAXParser {
     private void setFaculty(XMLEventReader reader) {
         XMLEvent event;
         StartElement element;
-        Characters character;
         for (int i = 0; i < 6; i++) {
             try {
                 event = reader.nextEvent();
@@ -131,7 +132,6 @@ public class StAXParser {
     private void setStatus(XMLEventReader reader) {
         XMLEvent event;
         StartElement element;
-        Characters character;
         for (int i = 0; i < 6; i++) {
             try {
                 event = reader.nextEvent();

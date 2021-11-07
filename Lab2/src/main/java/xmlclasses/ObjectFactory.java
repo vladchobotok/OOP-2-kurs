@@ -44,6 +44,15 @@ public class ObjectFactory {
     public Scientists.Scientist createScientistsScientist() {
         return new Scientists.Scientist();
     }
+    public Scientists.Scientist createScientistsScientist(String surname, String name, String middleName,
+                     Scientists.Scientist.Faculty faculty,
+                     String cathedra, String degree,
+                     Scientists.Scientist.Status status){
+        return new Scientists.Scientist(surname, name, middleName,
+                faculty,
+                cathedra, degree,
+                status);
+    }
 
     /**
      * Create an instance of {@link Scientists.Scientist.Faculty }

@@ -19,11 +19,12 @@ import org.xml.sax.SAXNotRecognizedException;
 import org.xml.sax.SAXNotSupportedException;
 import org.xml.sax.helpers.DefaultHandler;
 import xmlclasses.Scientists.Scientist;
+import xmlclasses.ObjectFactory;
 
 public class SAXParser extends DefaultHandler {
 
     private String filename;
-
+    private ObjectFactory objectFactory;
     private List<Scientist> scientists;
     private Deque<Object> elementDeque;
     private Deque<Scientist> objectDeque;
@@ -31,6 +32,7 @@ public class SAXParser extends DefaultHandler {
     private Deque<Scientist.Status> sObjectDeque;
 
     public SAXParser(String filename) {
+        objectFactory = new ObjectFactory();
         scientists = new ArrayList<>(20);
         elementDeque = new ArrayDeque<>();
         objectDeque = new ArrayDeque<>();
@@ -81,18 +83,18 @@ public class SAXParser extends DefaultHandler {
 
         if (Consts.SCIENTIST.equals(qName))
         {
-            Scientist scientist = new Scientist();
+            Scientist scientist = objectFactory.createScientistsScientist();
             this.objectDeque.push(scientist);
         }
         else if (Consts.FACULTY.equals(qName))
         {
-            Scientist.Faculty visualParameters1 = new Scientist.Faculty();
-            this.fObjectDeque.push(visualParameters1);
+            Scientist.Faculty faculty1 = objectFactory.createScientistsScientistFaculty();
+            this.fObjectDeque.push(faculty1);
         }
         else if (Consts.STATUS.equals(qName))
         {
-            Scientist.Status growingTips1 = new Scientist.Status();
-            this.sObjectDeque.push(growingTips1);
+            Scientist.Status status1 = objectFactory.createScientistsScientistStatus();
+            this.sObjectDeque.push(status1);
         }
     }
 

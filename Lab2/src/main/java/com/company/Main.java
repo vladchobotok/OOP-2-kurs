@@ -11,22 +11,22 @@ public final class Main {
 
         //варіант 16
 
-        DOMParser domParser = new DOMParser("input.xml");
+        DOMParser domParser = new DOMParser(Consts.XML_FILE);
         domParser.parseXML(true);
         domParser.sortXML();
         domParser.saveToXML();
 
-        SAXParser saxParser = new SAXParser("input.xml");
+        SAXParser saxParser = new SAXParser(Consts.XML_FILE);
         saxParser.parse(true);
         saxParser.sortXML();
         saxParser.writeXML();
 
-        StAXParser stAXParser = new StAXParser("input.xml");
+        StAXParser stAXParser = new StAXParser(Consts.XML_FILE);
         stAXParser.parse();
         stAXParser.sortXML();
         stAXParser.writeXML();
 
         HTMLConverter htmlConverter = new HTMLConverter();
-        htmlConverter.convertToHtml("input.xsl", "input.xml", "output.html");
+        htmlConverter.convertToHtml(Consts.XSL_FILE, Consts.XML_FILE, Consts.HTML_RESULT);
     }
 }

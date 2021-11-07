@@ -6,6 +6,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import xmlclasses.ObjectFactory;
 import xmlclasses.Scientists.Scientist;
 
 import javax.xml.XMLConstants;
@@ -27,12 +28,13 @@ import java.util.logging.Logger;
 
 public class DOMParser {
 
-    private final String filename;
-
-    private final List<Scientist> scientists;
+    private String filename;
+    private ObjectFactory objectFactory;
+    private List<Scientist> scientists;
 
     public DOMParser(String filename) {
         scientists = new ArrayList<>();
+        objectFactory = new ObjectFactory();
         this.filename = filename;
     }
 
@@ -86,7 +88,7 @@ public class DOMParser {
                     NodeList status = element.getElementsByTagName(Consts.STATUS);
                     Scientist.Status status1 = getStatus(status);
 
-                    scientist = new Scientist(surname, name, middleName, faculty1, cathedra, degree, status1);
+                    scientist = objectFactory.createScientistsScientist(surname, name, middleName, faculty1, cathedra, degree, status1);
                     scientists.add(scientist);
                 }
             }
@@ -97,7 +99,7 @@ public class DOMParser {
     }
 
     private Scientist.Faculty getFaculty(NodeList faculty){
-        Scientist.Faculty faculty1 = new Scientist.Faculty();
+        Scientist.Faculty faculty1 = objectFactory.createScientistsScientistFaculty();
         for (int tmp = 0; tmp < faculty.getLength(); tmp++) {
 
             Node node1 = faculty.item(tmp);
@@ -111,7 +113,7 @@ public class DOMParser {
     }
 
     private Scientist.Status getStatus(NodeList status){
-        Scientist.Status status1 = new Scientist.Status();
+        Scientist.Status status1 = objectFactory.createScientistsScientistStatus();
 
         for (int tmp = 0; tmp < status.getLength(); tmp++) {
 
