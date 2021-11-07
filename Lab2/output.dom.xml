@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scientists>
+<scientist>
+<surname>Іванов</surname>
+<name>Сергій</name>
+<middleName>Володимирович</middleName>
+<faculty>
+<department>Комп'ютерних наук та кібернетики</department>
+<section>Теоретичної кібернетики</section>
+</faculty>
+<cathedra>Теорії та технології програмування</cathedra>
+<degree>Кандидат наук</degree>
+<status>
+<academicStatus>Доцент</academicStatus>
+<date>03.08.2018</date>
+</status>
+</scientist>
+<scientist>
+<surname>Петров</surname>
+<name>Іван</name>
+<middleName>Михайлович</middleName>
+<faculty>
+<department>Комп'ютерних наук та кібернетики</department>
+<section>Моделювання та оптимізації</section>
+</faculty>
+<cathedra>Обчислювальної математики</cathedra>
+<degree>Доктор наук</degree>
+<status>
+<academicStatus>Професор</academicStatus>
+<date>25.05.2015</date>
+</status>
+</scientist>
+</scientists>

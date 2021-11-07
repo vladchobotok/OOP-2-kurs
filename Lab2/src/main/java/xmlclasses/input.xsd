@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name = "scientists">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name = "scientist" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name = "surname">
+                <xs:simpleType>
+                  <xs:restriction base = "xs:string">
+                    <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name = "name">
+                <xs:simpleType>
+                  <xs:restriction base = "xs:string">
+                    <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name = "middleName">
+                <xs:simpleType>
+                  <xs:restriction base = "xs:string">
+                    <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name = "faculty">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name = "department">
+                      <xs:simpleType>
+                        <xs:restriction base = "xs:string">
+                          <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name = "section">
+                      <xs:simpleType>
+                        <xs:restriction base = "xs:string">
+                          <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name = "cathedra">
+                <xs:simpleType>
+                  <xs:restriction base = "xs:string">
+                    <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name = "degree">
+                <xs:simpleType>
+                  <xs:restriction base = "xs:string">
+                    <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name = "status">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name = "academicStatus">
+                      <xs:simpleType>
+                        <xs:restriction base = "xs:string">
+                          <xs:pattern value = "([a-zA-Zа-яА-Я])+"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name = "date">
+                      <xs:simpleType>
+                        <xs:restriction base = "xs:string">
+                          <xs:pattern value = "([0-9.])+"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
