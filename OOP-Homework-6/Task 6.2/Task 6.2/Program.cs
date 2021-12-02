@@ -15,7 +15,7 @@ namespace AdapterExample
     {
         public void makeSound()
         {
-            Console.WriteLine("Chirp Chirp");
+            Console.WriteLine("Cvirink Cvirink");
         }
     }
 
@@ -24,11 +24,11 @@ namespace AdapterExample
         public void squeak();
     }
 
-    class PlasticToyDuck : ToyDuck
+    class RubberToyDuck : ToyDuck
     {
         public void squeak()
         {
-            Console.WriteLine("Squeak");
+            Console.WriteLine("Krya Krya");
         }
     }
 
@@ -50,7 +50,7 @@ namespace AdapterExample
         static void Main(string[] args)
         {
             Sparrow sparrow = new Sparrow();
-            ToyDuck toyDuck = new PlasticToyDuck();
+            ToyDuck toyDuck = new RubberToyDuck();
             ToyDuck birdAdapter = new BirdAdapter(sparrow);
 
             Console.WriteLine("Sparrow");
