@@ -1,0 +1,32 @@
+D:\пап0чка\dz 6\Task2\bin\Debug\net5.0\Task2.exe
+D:\пап0чка\dz 6\Task2\bin\Debug\net5.0\Task2.deps.json
+D:\пап0чка\dz 6\Task2\bin\Debug\net5.0\Task2.runtimeconfig.json
+D:\пап0чка\dz 6\Task2\bin\Debug\net5.0\Task2.runtimeconfig.dev.json
+D:\пап0чка\dz 6\Task2\bin\Debug\net5.0\Task2.dll
+D:\пап0чка\dz 6\Task2\bin\Debug\net5.0\ref\Task2.dll
+D:\пап0чка\dz 6\Task2\bin\Debug\net5.0\Task2.pdb
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.csproj.AssemblyReference.cache
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.GeneratedMSBuildEditorConfig.editorconfig
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.AssemblyInfoInputs.cache
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.AssemblyInfo.cs
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.csproj.CoreCompileInputs.cache
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.dll
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\ref\Task2.dll
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.pdb
+D:\пап0чка\dz 6\Task2\obj\Debug\net5.0\Task2.genruntimeconfig.cache
+D:\KNU\2kurs\OOP\Homework 6\Task 2\bin\Debug\net5.0\Task2.exe
+D:\KNU\2kurs\OOP\Homework 6\Task 2\bin\Debug\net5.0\Task2.deps.json
+D:\KNU\2kurs\OOP\Homework 6\Task 2\bin\Debug\net5.0\Task2.runtimeconfig.json
+D:\KNU\2kurs\OOP\Homework 6\Task 2\bin\Debug\net5.0\Task2.runtimeconfig.dev.json
+D:\KNU\2kurs\OOP\Homework 6\Task 2\bin\Debug\net5.0\Task2.dll
+D:\KNU\2kurs\OOP\Homework 6\Task 2\bin\Debug\net5.0\ref\Task2.dll
+D:\KNU\2kurs\OOP\Homework 6\Task 2\bin\Debug\net5.0\Task2.pdb
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.csproj.AssemblyReference.cache
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.GeneratedMSBuildEditorConfig.editorconfig
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.AssemblyInfoInputs.cache
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.AssemblyInfo.cs
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.csproj.CoreCompileInputs.cache
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.dll
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\ref\Task2.dll
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.pdb
+D:\KNU\2kurs\OOP\Homework 6\Task 2\obj\Debug\net5.0\Task2.genruntimeconfig.cache

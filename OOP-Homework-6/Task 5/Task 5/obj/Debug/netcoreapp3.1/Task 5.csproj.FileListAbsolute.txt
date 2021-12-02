@@ -1,0 +1,13 @@
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\bin\Debug\netcoreapp3.1\Task 5.exe
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\bin\Debug\netcoreapp3.1\Task 5.deps.json
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\bin\Debug\netcoreapp3.1\Task 5.runtimeconfig.json
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\bin\Debug\netcoreapp3.1\Task 5.runtimeconfig.dev.json
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\bin\Debug\netcoreapp3.1\Task 5.dll
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\bin\Debug\netcoreapp3.1\Task 5.pdb
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\obj\Debug\netcoreapp3.1\Task 5.csproj.AssemblyReference.cache
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\obj\Debug\netcoreapp3.1\Task 5.AssemblyInfoInputs.cache
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\obj\Debug\netcoreapp3.1\Task 5.AssemblyInfo.cs
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\obj\Debug\netcoreapp3.1\Task 5.csproj.CoreCompileInputs.cache
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\obj\Debug\netcoreapp3.1\Task 5.dll
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\obj\Debug\netcoreapp3.1\Task 5.pdb
+D:\KNU\2kurs\OOP\Homework 6\Task 5\Task 5\obj\Debug\netcoreapp3.1\Task 5.genruntimeconfig.cache
