@@ -14,7 +14,8 @@ public final class Main {
         DOMParser domParser = new DOMParser(Consts.XML_FILE);
         domParser.parseXML(true);
         domParser.sortXML();
-        domParser.saveToXML();
+        domParser.saveToXML(domParser.getScientists());
+        domParser.findInfo("Молодцов");
 
         SAXParser saxParser = new SAXParser(Consts.XML_FILE);
         saxParser.parse(true);
@@ -27,6 +28,6 @@ public final class Main {
         stAXParser.writeXML();
 
         HTMLConverter htmlConverter = new HTMLConverter();
-        htmlConverter.convertToHtml(Consts.XSL_FILE, Consts.XML_FILE, Consts.HTML_RESULT);
+        htmlConverter.convertToHtml(Consts.XSL_FILE, Consts.DOM_RESULT, Consts.HTML_RESULT);
     }
 }

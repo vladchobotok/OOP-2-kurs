@@ -7,6 +7,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import xmlclasses.ObjectFactory;
+import xmlclasses.Scientists;
 import xmlclasses.Scientists.Scientist;
 
 import javax.xml.XMLConstants;
@@ -25,6 +26,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DOMParser {
 
@@ -133,7 +136,7 @@ public class DOMParser {
         Collections.sort(scientists);
     }
 
-    private Document createDocument() throws ParserConfigurationException {
+    private Document createDocument(List<Scientist> scientists) throws ParserConfigurationException {
         final String[] scientistsArray = { Consts.SURNAME, Consts.NAME, Consts.MIDDLENAME, Consts.FACULTY, Consts.CATHEDRA, Consts.DEGREE, Consts.STATUS};
         final String[] facultyArray = { Consts.DEPARTMENT, Consts.SECTION};
         final String[] statusArray = { Consts.ACADEMICSTATUS, Consts.DATE };
@@ -201,7 +204,7 @@ public class DOMParser {
 
     }
 
-    public void saveToXML(){
+    public void saveToXML(List<Scientist> scientists){
 
         StreamResult result = new StreamResult(new File(Consts.DOM_RESULT));
 
@@ -212,7 +215,7 @@ public class DOMParser {
             javax.xml.transform.Transformer t = null;
             t = tf.newTransformer();
             t.setOutputProperty(OutputKeys.INDENT, "yes");
-            t.transform(new DOMSource(createDocument()), result);
+            t.transform(new DOMSource(createDocument(scientists)), result);
         } catch (ParserConfigurationException | TransformerException e) {
             Logger.getLogger(DOMParser.class.getName()).log(Level.SEVERE, Consts.ERROR, e);
         }
@@ -229,5 +232,29 @@ public class DOMParser {
         resultList.add(scientist.getDegree());
         resultList.add(scientist.getStatus());
         return resultList;
+    }
+
+    public void findInfo(String keyWord) {
+        List<Scientist> findInfo = new ArrayList<>();
+        for (Scientist scientist: scientists) {
+            if(isContainExactWord(scientist.getSurname(), keyWord) ||
+                    isContainExactWord(scientist.getName(), keyWord) ||
+                    isContainExactWord(scientist.getMiddleName(), keyWord) ||
+                    isContainExactWord(scientist.getFaculty().getDepartment(), keyWord) ||
+                    isContainExactWord(scientist.getFaculty().getSection(), keyWord) ||
+                    isContainExactWord(scientist.getCathedra(), keyWord) ||
+                    isContainExactWord(scientist.getDegree(), keyWord) ||
+                    isContainExactWord(scientist.getStatus().getAcademicStatus(), keyWord) ||
+                    isContainExactWord(scientist.getStatus().getDate(), keyWord)){
+                findInfo.add(scientist);
+            }
+        }
+        saveToXML(findInfo);
+    }
+    private boolean isContainExactWord(String fullString, String partWord){
+        String pattern = "\\b"+partWord+"\\b";
+        Pattern p= Pattern.compile(pattern);
+        Matcher m=p.matcher(fullString);
+        return m.find();
     }
 }

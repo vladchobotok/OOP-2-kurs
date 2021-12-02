@@ -30,4 +30,19 @@
             <date>25.05.2015</date>
         </status>
     </scientist>
+    <scientist>
+        <surname>Молодцов</surname>
+        <name>Олександр</name>
+        <middleName>Ілліч</middleName>
+        <faculty>
+            <department>Комп'ютерних наук та кібернетики</department>
+            <section>Моделювання та оптимізації</section>
+        </faculty>
+        <cathedra>Обчислювальної математики</cathedra>
+        <degree>Доктор наук</degree>
+        <status>
+            <academicStatus>Професор</academicStatus>
+            <date>25.05.2015</date>
+        </status>
+    </scientist>
 </scientists>
